@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groco</title>
+    <link href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel = "stylesheet">
+
+    <style>
+
+         body{
+            margin: 0px;
+            padding: 0px;  
+            box-sizing: border-box;       
+
+        }
+        html{
+            /* scroll-behavior:initial;  directly scroll nahi karega*/
+            /* scroll-behavior:auto; direct;y scroll nahi karega */
+            scroll-behavior: smooth;
+
+        }
+        .header{
+            width: 100vw;
+            height: 14vh;
+            border: 2px solid black;
+            display: flex;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 10);
+            position: fixed;
+            background-image: linear-gradient(to right,yellow,white);
+        }
+        .logo{
+            
+        }
+        .logo img{
+            transform: scale(0.3);
+            position: relative;
+            bottom: 14vh;
+            right: 10vw;
+
+        }
+        .list{
+            display: flex;
+            font-size: 25px;
+            justify-content: space-between;
+            /* border: 2px solid black; */
+            width: 50vw;
+            height: 14vh;
+            position: relative;
+            right: 11vw;
+            top: 1vh;
+            text-decoration: none;
+            
+            
+        }
+        
+        .list li {
+            list-style: none;
+            text-decoration: none;
+            color: dark rgb(1, 1, 253);
+        }
+        .list li a{
+            text-decoration: none;
+        }
+        .list li a:hover{
+            color: red;
+        }
+        #content{
+            position: relative;
+            top: 14vh;
+            height: 50vh;
+            width: 100vw;
+            box-shadow: 0px 0px 60px black;
+        }
+        #content img{
+            width: 100vw;
+            height: 50vh;
+            filter: brightness(0.5)
+            
+        }
+        .maincontent{
+            color: yellow;
+            position: absolute;
+            top: 9vh;
+            right: 15vw;
+            width: 60vw;
+            height: 50vh;
+        }
+        .contenthead{
+            font-size: 50px;
+            
+
+        }
+        .contentpara{
+            font-size: 20px;
+
+        }
+        .contentbtn{
+            
+            background-color: transparent;
+            height: 8vh;
+            width: 15vw;
+            position: relative;
+            left: 20vw;
+           
+            color: white;
+            font-size: 20px;
+            transition: transform 1s ease;
+        }
+        .contentbtn:hover{
+            background-color: orangered;
+            transform: scale(1.1);
+            color: white;
+            border: 2px solid red;
+
+        }
+        #features{
+            position: relative;
+            top: 20vh;
+        }
+       
+        .featureshead img{
+            transform: scale(0.45);
+            position: relative;
+            right: 20vw;
+            bottom: 5vh;
+        }
+        .featureshead{
+            width: 100vw;
+            height: 40vh;
+            
+        }
+        
+        
+        .featbox{
+            display: flex;
+            justify-content: space-around;
+
+        }
+        #fbox{
+            width: 300px;
+            height: 600px;
+            
+            background-color: lightgoldenrodyellow;
+            transition: transform 1s ease;
+            box-shadow: 0px 0px 40px black;
+            
+
+        }
+        #fbox:hover{
+            opacity: 0.7;
+            transform: scale(1.1);
+            border: 2px solid red;
+            box-shadow: 0px 0px 40px black;
+        }
+
+        .f1box img{
+            height: 200px;
+            position: relative;
+            left: 4vw;
+
+        }
+        .f2box img{
+            width: 180px;
+            position: relative;
+            left: 4vw;
+            
+        }
+        .f3box img{
+            width: 260px;
+            
+            height: 250px;
+            position: relative;
+            left: 1.5vw;
+            
+            
+            
+        }
+        .f1box{
+
+
+
+        }
+        .f2box{
+
+        }
+        .f3box{
+
+        }
+        .h1box{
+            color: darkblue;
+            text-align: center;
+            font-size: 40px;
+
+
+        }
+        .parabox{
+            text-align: center;
+            font-size: 18px;
+
+        }
+        .btnbox{
+            background-color: transparent;
+            color: darkblue;
+            border: 2px solid darkblue;
+            font-size: 15px;
+            height: 8vh;
+            width: 10vw;
+            border-radius: 10px;
+            position: relative;
+            left: 5vw;
+            transition: transform 1s ease;
+
+        }
+        .btnbox:hover{
+            transform: scale(1.1);
+            background-color: orange;
+            color: blue;
+            border: 2px solid blue;
+            
+        }
+        #products{
+            height: 150vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+
+
+        }
+        #products{
+            height: 200vh;
+            width: 100vw;
+            /* border: 2px solid black; */
+            overflow: hidden;
+            position: relative;
+            top: 20vh;
+            /* background-image: linear-gradient(orange,yellow);
+            filter: brightness(0.5); */
+            /* background-color: rgb(247, 228, 191); */
+
+
+        }
+        .productshead{
+            margin-top: 20vh;
+            width: 100vw;
+            height:30vh;
+
+
+        }
+        .productshead img{
+            width: 100vw;
+            height:40vh;
+           
+            transform: scale(0.8);
+            position: relative;
+            bottom: 10vh;
+
+        }
+        .productcontainer{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+        }
+        #pbox{
+            height: 60vh;
+            width: 20vw;
+            border: 2px solid black;
+            box-shadow: 0px 0px 5px black;
+            transition: transform 1s ease;
+            margin-bottom: 25px;
+            
+            
+            
+
+        }
+        #pbox:hover{
+            box-shadow: 0px 0px 20px black;
+            transform: scale(1.1);
+            opacity: 0.7;
+
+        }
+        #pbox img{
+            width: 20vw;
+            height: 40vh;
+        }
+        .productbtn{
+            height: 9vh;
+            width: 18vw;
+            /* border-radius: 10px; */
+            border: 2px solid darkblue;
+            color: darkblue;
+            background-color: transparent;
+            /* transition: transform 1s ease; */
+            position: relative;
+            left: 1vw;
+            font-size: 25px;
+            background-image: linear-gradient(to right,orange,white);
+
+
+        }
+        @keyframes colorchangebtn{
+
+        }
+        .productbtn:hover{
+            
+            background-color: orange;
+            color: red;
+            border: 2px solid red;
+
+        }
+        #categories{
+            width: 100vw;
+            height: 130vh;
+/*             border: 2px solid black; */
+
+        }
+        .categorieshead{
+
+        }
+        .categorieshead img{
+            transform: scale(0.5);
+            position: relative;
+            right: 17vw;
+/*             border: 2px solid black; */
+
+        }
+        .categorycont{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+
+        }
+        #cat{
+            border: 2px solid black;
+            height: 80vh;
+            width: 20vw;
+            transition: transform 1s ease;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px black;
+
+        }
+        #cat img{
+            height: 60vh;
+            width: 20vw;
+
+        }
+        #cat:hover{
+            transform: scale(1.1);
+            opacity: 0.6;
+            box-shadow: 0px 0px 20px black;
+    
+    
+
+        }
+        .catbtn{
+            height: 9vh;
+            width: 18vw;
+            border-radius: 10px;
+            border: 2px solid darkblue;
+            color: darkblue;
+            /* font-weight: bolder; */
+            /* background-image: linear-gradient(to right,yellow,white); */
+            /* transition: transform 1s ease; */
+            position: relative;
+            left: 1vw;
+            font-size: 25px;
+            animation-name: colorchange;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+
+
+
+
+        }
+        @keyframes colorchange{
+            0%{background-color: red;}
+            20%{background-color: rgb(251, 109, 58);}
+            40%{background-color: orange;}
+            60%{background-color: rgb(238, 255, 0);}
+            80%{background-color: yellow;}
+            100%{background-color: rgb(255, 255, 203);}
+           
+        }
+        .catbtn:hover{
+            background-color: orange;
+            color: red;
+            border: 2px solid red;
+
+    
+        }
+        #review{
+            width: 100vw;
+            height: 100vh;
+            border: 2px solid black;
+            background-image: linear-gradient(to right,yellow,white);
+            box-shadow: 0px 0px 60px black;
+            
+
+        }
+        .reviewhead{
+            width: 100vw;
+            height: 25vh;
+
+        }
+        .reviewhead img{
+            transform: scale(0.5);
+            position: relative;
+            right: 17vw;
+            box-shadow: 0px 0px 60px black;
+            
+            
+            
+            
+            
+        }
+        .containerrev{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        
+
+        }
+        .swiper{
+            width: 80%;
+            height: 120%;
+            position: relative;
+            bottom: 40vh;
+        }
+        .swiper-slide img{
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 10px;
+            transform: scale(0.3);
+            position: relative;
+            top: 10vh;
+            
+       
+            box-shadow: 0px 0px 60px black;
+            
+        }
+        .ending{
+            height: 80vh;
+            width: 100vw;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0px 0px 100px black;
+        }
+        #endingbox{
+            /* border: 2px solid black; */
+            height: 55vh;
+            width: 20%;
+            /* box-shadow: 0px 0px 20px black; */
+        }
+        .ending1{
+
+        }
+        .ending1 img{
+            width: 50%;
+            height: 15vh;
+            position: relative;
+            left: 5vw;
+        }
+        .para1{
+            color: darkblue;
+            font-size: 20px;
+        }
+        .ending2{
+            
+        }
+        .ending2 img{
+            
+        }
+        .ending3{
+            
+        }
+        .ending3 img{
+            
+        }
+        .ending4{
+            
+        }
+        .ending4 img{
+            
+        }
+        .headend{
+            color: darkblue;
+            font-weight: bolder;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+
+        }
+        .ending2 i{
+            position: relative;
+            left: 3vw;
+            top: 8vh;
+        }
+        .detailsend2{
+            color: darkblue;
+            position: relative;
+            left: 6vw;
+            top: 3vh;
+
+        }
+        .ending1 i{
+
+        }
+        .ending1{
+            width: 
+        }
+        .icons{
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 12vw;
+            height: 20vh;
+/*             border: 2px solid black; */
+            position: relative;
+            left: 4vw;
+            
+
+        }
+        .icons i{
+            transition: transfrom 1s ease;
+        }
+        .icons i:hover{
+            opacity: 0.7;
+            transform: scale(1.08);
+
+
+
+        }
+        .searchboxend4{
+            width: 12vw;
+            height: 6vh;
+
+        }
+        .btnend4{
+            background-color: orange;
+            border-radius: 10px;
+            border: 2px solid black;
+            font-family: hevaltica;
+            position: relative;
+            top: 8vh;
+            font-size: 20px;
+            right: 12vw;
+            transition: transform 1s ease;
+
+
+        }
+        .cards{
+            display: flex;
+            justify-content: space-evenly;
+            
+            
+            
+            
+        }
+        .cards i{
+            position: relative;
+            top: 10vh;
+            transform: scale(1.4);
+        }
+        .detailsend4{
+            font-size: 17px;
+            color: darkblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        .btnend4:hover{
+            opacity: 0.7;
+            transform: scale(1.1);
+        }
+            
+
+        
+
+        
+
+        
+
+
+        
+
+
+
+
+          
+
+
+            
+
+        
+    
+        
+
+
+    </style>
+    <script>
+        
+
+        
+        
+    </script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div class = "header">
+        <div class = "logo">
+            <img src = "logo.jpg"  alt = "error">
+
+        </div>
+        <div class = "mainheading">
+            <ul class = "list">
+                <li><a href = "#content">Home</a></li>
+                <li><a href = "#features">Features</a></li>
+                <li><a href = "#products">Bestsellers</a></li>
+                <li><a href = "#categories">Categories</a></li>
+                <li><a href = "#review">Review</a></li>
+                <!-- <li><a href = "#blogs">Blogs</a></li> -->
+            </ul>
+        </div>
+        <div class = "icon">
+
+        </div>
+
+    </div>
+    <div id = "content">
+        <img src =  "wallpaper.jpg" alt = "">
+        <div class = "maincontent">
+            <h1 class = "contenthead">Fresh And Organic Products For You</h1>
+            <p class = "contentpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quaerat in consectetur amet sit maxime corporis saepe vitae, quae deleniti neque! Eveniet totam voluptatibus vero quos veniam nam voluptates, aliquam sequi.</p>
+            <button class = "contentbtn">Shop Now</button>
+        </div>
+    </div>
+    <div id = "features">
+        <div class = "featureshead">
+            <img src = "featureshed.jpg">
+        </div>
+        <div class = "featbox">
+            <div class = "f1box" id = "fbox">
+                <img src = "freshfood.jpg">
+                <h1 class = "h1box">Fresh And Organic</h1>
+                <p class = "parabox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium blanditiis, sunt at aperiam totam a vel quisquam corporis eveniet porro magni est, quod ducimus quidem fugiat temporibus consectetur voluptatum asperiores sit!</p>
+                <button class = "btnbox">Read More</button>
+
+            </div>
+            <div class = "f2box" id = "fbox">
+                <img src = "delivery.jpg">
+                <h1 class = "h1box">Free Delivery</h1>
+                <p class = "parabox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium blanditiis, sunt at aperiam totam a vel quisquam corporis eveniet porro magni est, quod ducimus quidem fugiat temporibus consectetur voluptatum asperiores sit!</p>
+                <button class = "btnbox">Read More</button>
+                
+            </div>
+            <div class = "f3box" id = "fbox">
+                <img src = "payment.jpg">
+                <h1 class = "h1box">Easy Payments</h1>
+                <p class = "parabox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium blanditiis, sunt at aperiam totam a vel quisquam corporis eveniet porro magni est, quod ducimus quidem fugiat temporibus consectetur voluptatum asperiores sit!</p>
+                <button class = "btnbox">Read More</button>
+                
+            </div>
+        </div>
+    </div>
+    <div id = "products">
+        <div class = "productshead">
+            <img src = "cathead.jpg">
+
+        </div>
+        <!-- <div class = "nav">
+            <button class = "prev" onclick = "goPrev()">Prev</button>
+            <button class = "next" onclick = "goNext()">Next</button>
+        </div> -->
+        <div class = "productcontainer">
+            <div class = "p1box" id = "pbox">
+               <img src = "onion.jpg">
+               <button class = "productbtn">Add To Cart</button>
+                
+
+            </div>
+            
+                
+
+        
+            <div class = "p2box" id = "pbox">
+                <img src = "potato.jpg">
+                <button class = "productbtn">Add To Cart</button>
+                
+
+            </div>
+            <div class = "p3box" id = "pbox">
+                <img src = "cabbage.jpg">
+                <button class = "productbtn">Add To Cart</button>
+                
+
+            </div>
+            <div class = "p4box" id = "pbox">
+                <img src = "carrot.jpg">
+                <button class = "productbtn">Add To Cart</button>
+                
+
+            </div>
+            <div class = "p5box" id = "pbox">
+                <img src = "lemon.jpg">
+                <button class = "productbtn">Add To Cart</button>
+                
+
+            </div>
+            <div class = "p6box" id = "pbox">
+                <img src = "orange.jpg">
+                <button class = "productbtn">Add To Cart</button>
+                
+
+            </div>
+            <div class = "p7box" id = "pbox">
+                <img src = "meat.jpg">
+                <button class = "productbtn">Add To Cart</button>
+                
+
+            </div>
+            <div class = "p8box" id = "pbox">
+                <img src = "spinach.jpg">
+                <button class = "productbtn">Add To Cart</button>
+                
+
+            </div>
+
+        </div>
+    </div>
+    <div id = "categories">
+        <div class = "categorieshead">
+            <img src = "categoryhead.jpg" alt = "">
+            
+
+        </div>
+        <div class = "categorycont">
+            <div class = "cat1" id = "cat">
+                <img src = "vegetables.jpg">
+                <button class = "catbtn">Get Now</button>
+
+            </div>
+            <div class = "cat1" id = "cat">
+                <img src = "fruits.jpg">
+                <button class = "catbtn">Get Now</button>
+                
+            </div>
+            <div class = "cat1" id = "cat">
+                <img src = "dairy.jpg">
+                <button class = "catbtn">Get Now</button>
+                
+            </div>
+            <div class = "cat1" id = "cat">
+                <img src = "freshmeat.jpg">
+                <button class = "catbtn">Get Now</button>
+                
+            </div>
+        </div>
+    </div>
+    <div id = "review">
+        <div class = "reviewhead">
+            <img src = "reviewhead.jpg">
+            
+        </div>
+        <div class = "containerrev">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src = "review1.jpg"></div>
+                  <div class="swiper-slide"><img src = "review2.jpg"></div>
+                  <div class="swiper-slide"><img src = "review3.jpg"></div>
+                  <div class="swiper-slide"><img src = "review4.jpg"></div>
+                  
+                  ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+        </div>
+    </div>
+    <div class = "ending">
+        <div class = "ending1" id = "endingbox">
+            <img src = "logo.jpg"  alt = "error">
+            <p class = "para1">Follow our social media</p>
+            <div class = "icons">
+                <a href = "https://youtube.com" target= "_blank"><i class="fa-brands fa-youtube fa-xl" style="color: #ff8800;"></i></a>
+                <a href = "https://instagram.com" target = "_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #ff7b00;"></i></a>
+                <a href = "https://facebook.com" target = "_blank"><i class="fa-brands fa-facebook fa-xl" style="color: #ff8800;"></i></a>
+                <a href = "https://twitter.com" target = "_blank"><i class="fa-brands fa-twitter fa-xl" style="color: #ff7300;"></i></a>
+
+
+
+            </div>
+            
+            
+
+
+        </div>
+        <div class = "ending2" id = "endingbox">
+            <h1 class = "headend">Contact Info</h1>
+            <i class="fa-solid fa-phone fa-xl" style="color: #ff7e29;"></i>
+            <p class = "detailsend2">+91 6379227281</p>
+            <i class="fa-solid fa-phone fa-xl" style="color: #ff7e29;"></i>
+            <p class = "detailsend2">+91 8285839011</p>
+            <i class="fa-solid fa-envelope fa-xl" style="color: #ff8800;"></i>
+            <p class = "detailsend2">reetamdutta6@gmail.com</p>
+            <i class="fa-solid fa-location-dot fa-xl" style="color: #ff881a;"></i>
+            <p class = "detailsend2">Noida,India-40023</p>
+
+            
+            
+
+
+
+            
+        </div>
+        <div class = "ending3" id = "endingbox">
+            
+        </div>
+        <div class = "ending4" id = "endingbox">
+            <h1 class = "headend">Newsletter</h1>
+            <p class = "detailsend4">Subscribe For Latest Updates</p>
+            <input type = "text" placeholder="you email" class = "searchboxend4">
+            <button class = "btnend4">Subscribe</button>
+            <div class = "cards">
+                <i class="fa-brands fa-cc-mastercard fa-xl"></i>
+                <i class="fa-brands fa-cc-visa fa-xl"></i>
+
+
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+  
+    
+    loop: true,
+
+  
+    pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+
+    },
+
+  
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    },
+
+  
+});
+
+</script>
+
+
+    
+</body>
+</html>
