@@ -11,7 +11,10 @@
          body{
             margin: 0px;
             padding: 0px;  
-            box-sizing: border-box;       
+            box-sizing: border-box;   
+            background-image: url("background.jpg");  
+            background-size: cover;
+      
 
         }
         html{
@@ -359,29 +362,21 @@
             border: 2px solid darkblue;
             color: darkblue;
             /* font-weight: bolder; */
-            /* background-image: linear-gradient(to right,yellow,white); */
+            background-image: linear-gradient(to right,yellow,white);
             /* transition: transform 1s ease; */
             position: relative;
             left: 1vw;
             font-size: 25px;
-            animation-name: colorchange;
-            animation-duration: 1s;
+            /* animation-name: colorchange; */
+            /* animation-duration: 1s;
             animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; */
 
 
 
 
         }
-        @keyframes colorchange{
-            0%{background-color: red;}
-            20%{background-color: rgb(251, 109, 58);}
-            40%{background-color: orange;}
-            60%{background-color: rgb(238, 255, 0);}
-            80%{background-color: yellow;}
-            100%{background-color: rgb(255, 255, 203);}
-           
-        }
+        
         .catbtn:hover{
             background-color: orange;
             color: red;
@@ -395,6 +390,7 @@
             border: 2px solid black;
             background-image: linear-gradient(to right,yellow,white);
             box-shadow: 0px 0px 60px black;
+            background-image: url("review.jpg");
             
 
         }
@@ -450,6 +446,8 @@
             justify-content: space-around;
             align-items: center;
             box-shadow: 0px 0px 100px black;
+            background-color: white;
+            background-size: cover;
         }
         #endingbox{
             /* border: 2px solid black; */
